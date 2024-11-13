@@ -17,7 +17,13 @@
                 <label for="" class="form-label mt-4">Fecha de Finalización</label>
                 <input type="date" name="duedate" class = "form-control" id="" value="{{$todo->duedate}}">
                 <input type="number" name="id" value="{{$todo->id}}" hidden>
+                <label for="" class="form-label mt-4">Estado</label>
+<select class="form-control" id="" name="status">
+                        <option value="pending" @if ($todo->status == 'pending') selected @endif>Pending</option>
+    <option value="completed" @if ($todo->status == 'completed') selected @endif>Completed</option>
+</select>
                 <button class="btn btn-primary btn-lg mt-4">Actualizar Tarea</button>
+             
             </form>
         </div>
     </div>

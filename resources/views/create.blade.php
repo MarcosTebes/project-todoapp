@@ -30,8 +30,13 @@
                         @error('duedate')
                             {{$message}}
                         @enderror
-                    </div>
+                    </div><label for="" class="form-label mt-4">Estado</label>
+                <select class="form-control" name="status" id="">
+                    <option value="pending">Pendiente</option>
+                    <option value="completed">Finalizado</option>
+                </select>
                 <button class="btn btn-primary btn-lg mt-4">Agregar Tarea</button>
+
             </form>
         </div>
     </div>

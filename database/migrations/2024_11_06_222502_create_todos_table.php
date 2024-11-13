@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('work');
             $table->string('duedate');
             $table->timestamps();
+            $table->enum('status', ['pending','completed']);
         });
     }
 

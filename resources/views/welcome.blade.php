@@ -11,16 +11,19 @@
             <th>Nombre</th>
             <th>Descripción</th>
             <th>Fecha de Vencimiento</th>
+            <th>Estado</th>
             <th>Acción</th>
+
+           
         </tr>
         @foreach($todos as $todo)
             <tr>
                 <td>{{$todo->name}}</td>
                 <td>{{$todo->work}}</td>
                 <td>{{$todo->duedate}}</td>
+                <td>{{$todo->status}}</td>
                 <td>
-                    <a href="{{route("todo.edit",$todo->id)}}" class="btn btn-
-                     success btn-sm">Actualizar</a>
+                <a href="{{route("todo.edit",$todo->id)}}" class="btn btn-success btn-sm" >Actualizar</a>
                     <a href="{{route("todo.delete",$todo->id)}}" class="btn 
                      btn-danger btn-sm">Eliminar</a>
                 </td>
